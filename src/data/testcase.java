@@ -117,44 +117,6 @@ public class testcase {
         timeTable1.setId_room(rooms.get(1).getId());
 
         management.addTimeTable(timeTable1);
-        //create new time table
-        TimeTable timeTable2 = new TimeTable();
-        time = LocalDateTime.of(2017, 3, 8, 13, 0);
-        timeTable2.setPeriod(new Period(time, time.plusHours(2)));
-        timeTable2.addStudent(students.get(3));
-        timeTable2.addStudent(students.get(4));
-        timeTable2.addStudent(students.get(5));
-
-        timeTable2.setId_professor(professors.get(2).getId());
-        timeTable2.setId_room(rooms.get(2).getId());
-
-        management.addTimeTable(timeTable2);
-
-        //create new time table
-        TimeTable timeTable3 = new TimeTable();
-        time = LocalDateTime.of(2017, 3, 9, 8, 0);
-        timeTable3.setPeriod(new Period(time, time.plusHours(2)));
-        timeTable3.addStudent(students.get(3));
-        timeTable3.addStudent(students.get(4));
-        timeTable3.addStudent(students.get(5));
-
-        timeTable3.setId_professor(professors.get(0).getId());
-        timeTable3.setId_room(rooms.get(0).getId());
-
-        management.addTimeTable(timeTable3);
-
-        //create new time table
-        TimeTable timeTable4 = new TimeTable();
-        time = LocalDateTime.of(2017, 3, 9, 10, 0);
-        timeTable4.setPeriod(new Period(time, time.plusHours(2)));
-        timeTable4.addStudent(students.get(3));
-        timeTable4.addStudent(students.get(4));
-        timeTable4.addStudent(students.get(5));
-
-        timeTable4.setId_professor(professors.get(0).getId());
-        timeTable4.setId_room(rooms.get(0).getId());
-
-        management.addTimeTable(timeTable4);
     }
 
 }
