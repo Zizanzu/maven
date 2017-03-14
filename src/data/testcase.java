@@ -66,6 +66,7 @@ public class testcase {
         professors.add(new Professor(1, "Samuel Barnes"));
         professors.add(new Professor(2, "Aidan Chapman"));
         professors.add(new Professor(3, "James Moore"));
+        professors.add(new Professor(4, "Jany Moore"));
 
         management.setProfessors(professors);
 
@@ -141,6 +142,19 @@ public class testcase {
         timeTable3.setId_room(rooms.get(0).getId());
 
         management.addTimeTable(timeTable3);
+
+        //create new time table
+        TimeTable timeTable4 = new TimeTable();
+        time = LocalDateTime.of(2017, 3, 9, 10, 0);
+        timeTable4.setPeriod(new Period(time, time.plusHours(2)));
+        timeTable4.addStudent(students.get(3));
+        timeTable4.addStudent(students.get(4));
+        timeTable4.addStudent(students.get(5));
+
+        timeTable4.setId_professor(professors.get(0).getId());
+        timeTable4.setId_room(rooms.get(0).getId());
+
+        management.addTimeTable(timeTable4);
     }
 
 }
